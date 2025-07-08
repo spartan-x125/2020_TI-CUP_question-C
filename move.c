@@ -2,8 +2,8 @@
 
 extern int32_t TargetEncoder;
 
-#define angle1 30
-#define angle2 60
+#define speed1 60
+#define speed2 30
 
 
 /**
@@ -22,8 +22,14 @@ void stop(void){
     set_motor_pwm(TIM_CHANNEL_4,pid_Cal(1,0));
 }
 
-void turn(speed){
-    set_motor_pwm()
+void turn_left(speed){
+    set_motor_pwm(TIM_CHANNEL_3,pid_Cal(1,TargetEncoder+speed));
+    set_motor_pwm(TIM_CHANNEL_4,pid_Cal(0,TargetEncoder));
+}
+
+void turn_right(speed){
+    set_motor_pwm(TIM_CHANNEL_3,pid_Cal(0,TargetEncoder+speed));
+    set_motor_pwm(TIM_CHANNEL_4,pid_Cal(1,TargetEncoder));
 }
 
 /**
@@ -35,16 +41,16 @@ void move(void){
         go_straight();
     }
     if(L1==1&&R1==R2==0){
-        //set_servo_pwm(angle1);
+        turn_left(speed1);
     }
     if(L2==1&&R1==R2==0){
-        //set_servo_pwm(angle2);
+        turn_left(speed2);
     }
     if(R1==1&&L1==L2==0){
-        //set_servo_pwm(180-angle1);
+        turn_right(speed1);
     }
     if(R2==1&&L1==L2==0){
-        //set_servo_pwm(180-angle2);
+        turn_right(speed2);
     }
     if(L1==R1==L2==R2==0)stop();
 }
