@@ -6,9 +6,9 @@ typedef struct {
 }pid;
 
 
-#define P_value 1
-#define I_value 2
-#define D_value 3
+#define P_value 12
+#define I_value 3
+#define D_value 2
 //pid参数
 
 #define Left 0
@@ -17,7 +17,8 @@ typedef struct {
 extern int32_t TargetEncoder;//目标编码器数值
 int16_t LEncoder,REncoder;//左右编码器实际值
 int16_t Lpwm,Rpwm;//返回的pwm值
-pid *Lpid,*Rpid;
+pid Lpidval,Rpidval;
+pid *Lpid=&Lpidval,*Rpid=&Rpidval;
 
 
 /**

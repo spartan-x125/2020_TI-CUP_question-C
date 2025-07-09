@@ -37,4 +37,5 @@ new_car\main.o: ../Core/Inc/pwm.h
 new_car\main.o: ../Core/Inc/pid.h
 new_car\main.o: ../Core/Inc/move.h
 new_car\main.o: ../Core/Inc/OLED.h
-new_car\main.o: ../Core/Inc/OLED_Data.h
+new_car\main.o: ../Core/Inc/font.h
+new_car\main.o: D:\Keil\Keil-v5\ARM\ARMCC\Bin\..\include\string.h
