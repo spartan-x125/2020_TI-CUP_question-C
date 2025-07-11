@@ -5,11 +5,13 @@ typedef struct {
     __IO uint16_t lasterror,preverror;
 }pid;
 
-
 #define P_value 12
 #define I_value 3
 #define D_value 2
 //pid参数
+
+#define return_value 1
+//pid计算编码器转数->pwm占空比的比例系数
 
 #define Left 0
 #define Right 1
@@ -53,5 +55,5 @@ int32_t pid_Cal(uint16_t LR,int32_t target){//pid计算
     ans=P_value*(error-tpid->lasterror)+I_value*error+D_value*(error-2*tpid->lasterror+tpid->preverror);
     tpid->preverror=tpid->lasterror;
     tpid->lasterror=error;
-    return ans;
+    return ans*return_value;
 }
