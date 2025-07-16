@@ -1,4 +1,4 @@
-new_car\pid.o: pid.c
+new_car\pid.o: ..\Core\Src\pid.c
 new_car\pid.o: ../Core/Inc/pid.h
 new_car\pid.o: ../Core/Inc/tim.h
 new_car\pid.o: ../Core/Inc/main.h

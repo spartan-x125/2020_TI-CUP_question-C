@@ -1,4 +1,4 @@
-new_car\pwm.o: pwm.c
+new_car\pwm.o: ..\Core\Src\pwm.c
 new_car\pwm.o: ../Core/Inc/pwm.h
 new_car\pwm.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 new_car\pwm.o: ../Core/Inc/stm32f1xx_hal_conf.h

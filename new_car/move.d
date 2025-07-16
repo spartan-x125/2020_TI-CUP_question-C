@@ -1,4 +1,4 @@
-new_car\move.o: move.c
+new_car\move.o: ..\Core\Src\move.c
 new_car\move.o: ../Core/Inc/move.h
 new_car\move.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 new_car\move.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h
