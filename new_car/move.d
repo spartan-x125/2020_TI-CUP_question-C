@@ -34,3 +34,7 @@ new_car\move.o: ../Core/Inc/tim.h
 new_car\move.o: ../Core/Inc/main.h
 new_car\move.o: ../Core/Inc/gpio.h
 new_car\move.o: ../Core/Inc/pid.h
+new_car\move.o: ../Core/Inc/usart.h
+new_car\move.o: ../Core/Inc/OLED.h
+new_car\move.o: ../Core/Inc/font.h
+new_car\move.o: D:\Keil\Keil-v5\ARM\ARMCC\Bin\..\include\string.h
