@@ -1,2 +1,4 @@
 Load "new_car\\new_car.axf" 
-Erase Done.Programming Done.Verify OK.Flash Load finished at 16:34:36
+Internal DLL Error
+Error: Flash Download failed  -  Target DLL has been cancelled
+Flash Load finished at 16:46:49
